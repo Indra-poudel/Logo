@@ -1,0 +1,82 @@
+.logo-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  height: 434px;
+  width: 434px;
+  border-radius: 50%;
+  background-color: #7a12cd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.square {
+  width: 152.27px;
+  height: 152.86px;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.first_square {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25%;
+}
+
+.second_square {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 40%;
+}
+
+.first_square_border {
+  background-color: #e3d0ec;
+  border-width: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second_square_inner {
+  background-color: #7a12cd;
+  width: 118.41px;
+  height: 117.68px;
+}
+
+.rotate {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%) translateY(-50%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(0) translateY(-50%) rotate(45deg);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%) translateY(-50%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(0) translateY(-50%) rotate(45deg);
+  }
+}
+
+.first_square {
+  animation: slideInFromLeft 3s forwards;
+}
+
+.second_square {
+  animation: slideInFromRight 3s forwards;
+}
